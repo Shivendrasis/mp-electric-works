@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MPEW — Hero Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mpew.css">
+<style>
+  body{background:#E7EBF0;}
+  .page-head{max-width:1400px;margin:0 auto;padding:46px 28px 8px;}
+  .page-head h1{font-size:30px;letter-spacing:-.02em;}
+  .page-head p{color:var(--slate-600);margin-top:10px;max-width:680px;font-size:15.5px;}
+  .opt{max-width:1400px;margin:0 auto 60px;padding:0 28px;}
+  .opt-label{display:flex;align-items:baseline;gap:14px;margin:34px 0 16px;}
+  .opt-num{font-family:var(--mono);font-size:13px;font-weight:600;color:#fff;background:var(--navy-800);padding:5px 11px;border-radius:6px;letter-spacing:.05em;}
+  .opt-name{font-family:var(--display);font-weight:800;font-size:21px;color:var(--ink);}
+  .opt-desc{font-size:14px;color:var(--slate-600);margin-left:auto;max-width:440px;text-align:right;}
+  .frame{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(8,23,40,.16);border:1px solid rgba(8,23,40,.08);}
+  .browserbar{height:38px;background:#0c1722;display:flex;align-items:center;gap:7px;padding:0 16px;}
+  .browserbar i{width:11px;height:11px;border-radius:50%;background:#33424f;display:block;}
+  .browserbar .url{margin-left:14px;font-family:var(--mono);font-size:11.5px;color:#7c8a98;background:#1a2735;padding:4px 14px;border-radius:5px;}
+
+  /* generic nav inside frames */
+  .vnav{display:flex;align-items:center;gap:34px;height:72px;padding:0 40px;}
+  .vlogo{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:900;letter-spacing:-.02em;}
+  .vlogo .mark{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;flex:none;}
+  .vlogo .bolt{width:19px;height:19px;}
+  .vlogo b{font-size:19px;line-height:1;}
+  .vlogo small{display:block;font-family:var(--mono);font-weight:500;font-size:8.5px;letter-spacing:.16em;opacity:.7;margin-top:3px;}
+  .vlinks{display:flex;gap:24px;font-weight:600;font-size:14.5px;}
+  .vnav .spacer{flex:1;}
+
+  /* ---------- A: Cinematic ---------- */
+  .heroA{position:relative;height:600px;overflow:hidden;background:#06182b;}
+  .heroA img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;}
+  .heroA .scrim{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,24,43,.92) 0%,rgba(6,24,43,.7) 42%,rgba(6,24,43,.25) 100%);}
+  .heroA .vnav{position:relative;z-index:3;}
+  .heroA .vlinks a,.heroA .vlogo{color:#fff;}
+  .heroA .content{position:absolute;z-index:3;left:40px;bottom:104px;max-width:680px;}
+  .heroA h2{color:#fff;font-size:52px;line-height:1.04;}
+  .heroA h2 .o{color:var(--orange-400);}
+  .heroA p{color:#c7d2dd;font-size:18px;margin-top:20px;max-width:560px;}
+  .heroA .cta{display:flex;gap:14px;margin-top:30px;}
+  .heroA .statbar{position:absolute;z-index:3;left:0;right:0;bottom:0;background:rgba(6,24,43,.55);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.12);display:flex;}
+  .heroA .statbar div{flex:1;padding:18px 40px;border-right:1px solid rgba(255,255,255,.1);}
+  .heroA .statbar b{font-family:var(--display);font-size:26px;color:#fff;display:block;}
+  .heroA .statbar span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#9fb0bf;}
+
+  /* ---------- B: Engineered Split ---------- */
+  .frameB .vnav{background:var(--navy-800);}
+  .frameB .vlinks a,.frameB .vlogo{color:#fff;}
+  .heroB{display:grid;grid-template-columns:1.02fr .98fr;height:564px;}
+  .heroB .left{background:var(--navy-800);position:relative;padding:64px 48px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;}
+  .heroB .left::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:46px 46px;}
+  .heroB .left>*{position:relative;}
+  .heroB h2{color:#fff;font-size:44px;line-height:1.06;margin-top:18px;}
+  .heroB h2 .o{color:var(--orange-400);}
+  .heroB p{color:#aebccb;font-size:16px;margin-top:18px;max-width:430px;}
+  .heroB .specs{display:flex;gap:30px;margin-top:30px;}
+  .heroB .specs div b{font-family:var(--display);color:#fff;font-size:24px;display:block;}
+  .heroB .specs div span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#7c8a98;}
+  .heroB .cta{display:flex;gap:12px;margin-top:32px;}
+  .heroB .right{position:relative;background:#000;}
+  .heroB .right img{width:100%;height:100%;object-fit:cover;}
+  .heroB .right::after{content:"";position:absolute;inset:18px;border:2px solid var(--orange-500);pointer-events:none;}
+  .heroB .floatcard{position:absolute;left:-54px;bottom:48px;background:#fff;box-shadow:var(--sh-lg);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:16px;z-index:4;}
+  .heroB .floatcard .big{font-family:var(--display);font-weight:900;font-size:38px;color:var(--navy-800);line-height:1;}
+  .heroB .floatcard .lbl{font-size:13px;color:var(--slate-600);line-height:1.3;}
+  .heroB .floatcard .lbl b{color:var(--ink);}
+
+  /* ---------- C: Editorial Bold ---------- */
+  .frameC .vnav{background:#fff;border-bottom:1px solid var(--line);}
+  .frameC .vlinks a{color:var(--slate-700);}
+  .frameC .vlogo{color:var(--ink);}
+  .heroC{background:#fff;padding:56px 40px 0;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;height:564px;}
+  .heroC .copy{padding-top:24px;}
+  .heroC h2{font-size:54px;line-height:1.02;color:var(--ink);margin-top:18px;}
+  .heroC h2 .o{color:var(--orange-500);}
+  .heroC p{margin-top:22px;font-size:17px;color:var(--slate-600);max-width:460px;}
+  .heroC .cta{display:flex;gap:14px;margin-top:28px;}
+  .heroC .counters{display:flex;gap:36px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);}
+  .heroC .counters b{font-family:var(--display);font-size:32px;color:var(--navy-800);display:block;}
+  .heroC .counters b .o{color:var(--orange-500);}
+  .heroC .counters span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-500);}
+  .heroC .visual{position:relative;}
+  .heroC .visual .main{position:absolute;inset:0 0 0 30px;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);overflow:hidden;}
+  .heroC .visual .main img{width:100%;height:100%;object-fit:cover;}
+  .heroC .visual .chip{position:absolute;left:-6px;bottom:60px;background:var(--orange-500);color:#fff;padding:16px 22px;border-radius:10px;box-shadow:var(--sh-orange);z-index:3;}
+  .heroC .visual .chip b{font-family:var(--display);font-size:22px;display:block;line-height:1;}
+  .heroC .visual .chip span{font-size:12px;opacity:.92;}
+  .heroC .visual .inset{position:absolute;right:24px;top:34px;width:150px;height:150px;border-radius:12px;overflow:hidden;border:5px solid #fff;box-shadow:var(--sh-lg);z-index:3;}
+  .heroC .visual .inset img{width:100%;height:100%;object-fit:cover;}
+</style>
+</head>
+<body>
+<div class="page-head">
+  <h1>MP Electric Works — Hero Directions</h1>
+  <p>Three distinct treatments for the homepage hero, all using your real workshop photography and the navy + orange system. Pick one (or mix elements) and I'll build out all 8 pages in that direction.</p>
+</div>
+
+<!-- ============ A ============ -->
+<div class="opt">
+  <div class="opt-label">
+    <span class="opt-num">01</span>
+    <span class="opt-name">Cinematic Industrial</span>
+    <span class="opt-desc">Full-bleed golden-hour substation photo, dark scrim, overlapping stat bar. Reads like Siemens / ABB — bold and trust-building.</span>
+  </div>
+  <div class="frame">
+    <div class="browserbar"><i></i><i></i><i></i><span class="url">mpelectricworks.in</span></div>
+    <div class="heroA">
+      <img class="bg" src="assets/img/substation-sunset.jpg" alt="">
+      <div class="scrim"></div>
+      <nav class="vnav">
+        <div class="vlogo"><span class="mark" style="background:linear-gradient(135deg,#F26A1B,#E2562B)"><svg class="bolt" viewBox="0 0 24 24" fill="#fff"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span><b>MPEW</b><small>M.P. ELECTRIC WORKS</small></span></div>
+        <div class="spacer"></div>
+        <div class="vlinks"><a>Home</a><a>About</a><a>Services</a><a>Industries</a><a>Contact</a></div>
+        <a class="btn btn-primary" style="padding:11px 20px">Get Quote</a>
+      </nav>
+      <div class="content">
+        <span class="eyebrow on-dark">Engineering Excellence Since 2008</span>
+        <h2 style="margin-top:18px">Electrical &amp; Mechanical<br>Engineering <span class="o">Solutions</span></h2>
+        <p>Your trusted manufacturing, machining, fabrication, winding and electrical solutions partner in Dewas, Madhya Pradesh.</p>
+        <div class="cta"><a class="btn btn-primary btn-lg">Get a Quote</a><a class="btn btn-ghost btn-lg">Our Capabilities</a></div>
+      </div>
+      <div class="statbar">
+        <div><b>15+</b><span>Years</span></div>
+        <div><b>30+</b><span>Employees</span></div>
+        <div><b>8000</b><span>Sq Ft Facility</span></div>
+        <div><b>100+</b><span>Projects</span></div>
+        <div style="border-right:none"><b>50+</b><span>Clients</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ B ============ -->
+<div class="opt">
+  <div class="opt-label">
+    <span class="opt-num">02</span>
+    <span class="opt-name">Engineered Split</span>
+    <span class="opt-desc">Blueprint-grid navy panel beside a framed CNC photo with a floating "Est. 2008" card. Technical, structured, precise.</span>
+  </div>
+  <div class="frame frameB">
+    <div class="browserbar"><i></i><i></i><i></i><span class="url">mpelectricworks.in</span></div>
+    <nav class="vnav">
+      <div class="vlogo"><span class="mark" style="background:linear-gradient(135deg,#F26A1B,#E2562B)"><svg class="bolt" viewBox="0 0 24 24" fill="#fff"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span><b>MPEW</b><small>M.P. ELECTRIC WORKS</small></span></div>
+      <div class="spacer"></div>
+      <div class="vlinks"><a>Home</a><a>About</a><a>Services</a><a>Industries</a><a>Contact</a></div>
+      <a class="btn btn-primary" style="padding:11px 20px">Get Quote</a>
+    </nav>
+    <div class="heroB">
+      <div class="left">
+        <span class="eyebrow on-dark">Manufacturing &amp; Electrical Partner</span>
+        <h2>Precision <span class="o">Engineering</span><br>Built to Industrial Scale</h2>
+        <p>Machining, fabrication, motor winding and complete electrical panel solutions — delivered from our 8000 sq ft facility in Dewas.</p>
+        <div class="specs">
+          <div><b>2008</b><span>Established</span></div>
+          <div><b>15+</b><span>Years</span></div>
+          <div><b>8000</b><span>Sq Ft</span></div>
+        </div>
+        <div class="cta"><a class="btn btn-primary btn-lg">Get a Quote</a><a class="btn btn-ghost btn-lg">Explore Services</a></div>
+      </div>
+      <div class="right">
+        <img src="assets/img/cnc-machine.jpg" alt="">
+        <div class="floatcard"><span class="big">15+</span><span class="lbl"><b>Years of</b><br>industrial<br>expertise</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ C ============ -->
+<div class="opt">
+  <div class="opt-label">
+    <span class="opt-num">03</span>
+    <span class="opt-name">Editorial Bold</span>
+    <span class="opt-desc">Airy white canvas, oversized headline, diagonal photo cut and inset detail. Modern and confident — Bosch-like.</span>
+  </div>
+  <div class="frame frameC">
+    <div class="browserbar"><i></i><i></i><i></i><span class="url">mpelectricworks.in</span></div>
+    <nav class="vnav">
+      <div class="vlogo"><span class="mark" style="background:linear-gradient(135deg,#0A2540,#0F2F52)"><svg class="bolt" viewBox="0 0 24 24" fill="#F26A1B"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><span><b>MPEW</b><small style="color:var(--slate-500)">M.P. ELECTRIC WORKS</small></span></div>
+      <div class="spacer"></div>
+      <div class="vlinks"><a>Home</a><a>About</a><a>Services</a><a>Industries</a><a>Contact</a></div>
+      <a class="btn btn-primary" style="padding:11px 20px">Get Quote</a>
+    </nav>
+    <div class="heroC">
+      <div class="copy">
+        <span class="eyebrow">Since 2008 · Dewas, M.P.</span>
+        <h2>Electrical &amp; Mechanical solutions, <span class="o">engineered to last.</span></h2>
+        <p>From CNC machining and heavy fabrication to motor winding and HT/LT electrical works — one trusted partner for industry.</p>
+        <div class="cta"><a class="btn btn-primary btn-lg">Get a Quote</a><a class="btn btn-outline btn-lg">Contact Us</a></div>
+        <div class="counters">
+          <div><b>15<span class="o">+</span></b><span>Years</span></div>
+          <div><b>100<span class="o">+</span></b><span>Projects</span></div>
+          <div><b>50<span class="o">+</span></b><span>Clients</span></div>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="main"><img src="assets/img/substation-sunset.jpg" alt=""></div>
+        <div class="inset"><img src="assets/img/parts-turned.jpg" alt=""></div>
+        <div class="chip"><b>8000 Sq Ft</b><span>Manufacturing facility</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us — MP Electric Works (MPEW), Dewas</title>
+<meta name="description" content="Since 2008, MP Electric Works has delivered electrical & mechanical engineering solutions from Dewas, Madhya Pradesh. Learn our story, vision and values.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mpew.css">
+<style>
+  .story{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center;}
+  .story-media{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/3.2;}
+  .story-media img{width:100%;height:100%;object-fit:cover;}
+  .story-media .tagbox{position:absolute;left:20px;bottom:20px;right:20px;background:rgba(6,24,43,.78);backdrop-filter:blur(6px);border-radius:12px;padding:18px 20px;color:#fff;}
+  .story-media .tagbox b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--orange-400);text-transform:uppercase;}
+  .story-media .tagbox p{color:#dbe3ea;font-size:14px;margin-top:6px;}
+
+  .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;}
+  .vm{padding:40px 38px;border-radius:var(--r-lg);position:relative;overflow:hidden;}
+  .vm.mission{background:var(--navy-800);color:#fff;}
+  .vm.vision{background:#fff;border:1px solid var(--line);}
+  .vm .vico{width:58px;height:58px;border-radius:14px;display:grid;place-items:center;margin-bottom:22px;}
+  .vm.mission .vico{background:var(--orange-500);color:#fff;}
+  .vm.vision .vico{background:var(--orange-050);color:var(--orange-600);}
+  .vm .vico svg{width:28px;height:28px;}
+  .vm h3{font-size:24px;margin-bottom:14px;}
+  .vm.mission h3{color:#fff;}
+  .vm p{font-size:15.5px;line-height:1.7;}
+  .vm.mission p{color:#aebccb;}
+  .vm.vision p{color:var(--slate-600);}
+  .vm.mission::after{content:"";position:absolute;right:-80px;top:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(242,106,27,.22),transparent 70%);}
+
+  /* journey timeline */
+  .journey{position:relative;margin-top:50px;padding-left:34px;}
+  .journey::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--orange-500),var(--line));}
+  .j-item{position:relative;padding:0 0 38px 36px;}
+  .j-item::before{content:"";position:absolute;left:-34px;top:4px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--orange-500);}
+  .j-item .yr{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--orange-600);letter-spacing:.05em;}
+  .j-item h4{font-size:19px;margin-top:6px;}
+  .j-item p{font-size:14.5px;color:var(--slate-600);margin-top:7px;max-width:560px;}
+
+  /* leadership */
+  .leader{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;}
+  .leader .portrait{position:relative;aspect-ratio:1;background:var(--navy-800);display:grid;place-items:center;overflow:hidden;}
+  .leader .portrait .ph-slot{text-align:center;color:#5d6b78;}
+  .leader .portrait .mono{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--navy-600),var(--navy-800));border:2px solid rgba(255,255,255,.12);display:grid;place-items:center;margin:0 auto 16px;font-family:var(--display);font-weight:800;font-size:40px;color:#fff;}
+  .leader .portrait .ph-slot span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;}
+  .leader .lc{padding:48px 44px 48px 0;}
+  .leader .lc .qmark{font-family:var(--display);font-size:60px;color:var(--orange-500);opacity:.25;line-height:.5;height:30px;}
+  .leader .lc blockquote{font-family:var(--display);font-weight:700;font-size:24px;line-height:1.4;letter-spacing:-.01em;color:var(--ink);margin:0 0 24px;}
+  .leader .lc .name{font-family:var(--display);font-weight:800;font-size:19px;}
+  .leader .lc .role{font-size:14px;color:var(--orange-600);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-top:4px;}
+
+  @media (max-width:860px){
+    .story{grid-template-columns:1fr;gap:40px;}
+    .vm-grid{grid-template-columns:1fr;}
+    .leader{grid-template-columns:1fr;}
+    .leader .lc{padding:36px 30px;}
+    .leader .portrait{aspect-ratio:16/10;}
+  }
+</style>
+</head>
+<body data-page="about">
+
+<section class="banner" data-screen-label="About — Banner">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a><span class="sep">/</span><span class="cur">About Us</span></div>
+    <h1 class="reveal">Engineering trust since 2008</h1>
+    <p class="reveal" data-d="1">From three employees to a 30+ strong team, MPEW has grown into a complete electrical &amp; mechanical solutions partner — driven by innovation and an uncompromising commitment to quality.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section" data-screen-label="About — Story">
+  <div class="wrap story">
+    <div class="story-media reveal">
+      <img src="assets/img/factory-exterior.jpg" alt="MPEW facility in Dewas">
+      <div class="tagbox"><b>Our Workshop · Dewas, M.P.</b><p>8000 sq ft of manufacturing, machining, fabrication and winding capability.</p></div>
+    </div>
+    <div class="reveal" data-d="1">
+      <span class="eyebrow">Our Story</span>
+      <h2 style="font-size:38px;margin-top:16px">A company built on rich industrial experience and a unique passion.</h2>
+      <p class="lede" style="margin-top:18px">MP Electric Works was set up in 2008. Owing to rich industrial experience, we are involved in providing electrical &amp; mechanical solutions to our customers — dedicated with a strong ability to innovate, design, assemble and deliver all equipment with a unique passion.</p>
+      <p style="margin-top:16px;color:var(--slate-600);font-size:16px;line-height:1.7">MPEW has grown from its original three employees to a company that today has more than 30 employees. We now operate an 8000 sq ft manufacturing workshop in Dewas equipped with the best machines — and we have worked hard, embracing every opportunity, to get where we are today.</p>
+      <div style="display:flex;gap:36px;margin-top:32px">
+        <div><div class="num" style="font-family:var(--display);font-weight:800;font-size:38px;color:var(--navy-800)"><span data-count="15">0</span><span style="color:var(--orange-500)">+</span></div><div style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-500)">Years</div></div>
+        <div><div class="num" style="font-family:var(--display);font-weight:800;font-size:38px;color:var(--navy-800)"><span data-count="30">0</span><span style="color:var(--orange-500)">+</span></div><div style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-500)">Employees</div></div>
+        <div><div class="num" style="font-family:var(--display);font-weight:800;font-size:38px;color:var(--navy-800)"><span data-count="8000">0</span></div><div style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-500)">Sq Ft</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION / MISSION -->
+<section class="section" style="background:var(--mist);padding-top:80px;padding-bottom:80px" data-screen-label="About — Vision & Mission">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">What Drives Us</span>
+      <h2>Our mission &amp; vision</h2>
+    </div>
+    <div class="vm-grid">
+      <div class="vm mission reveal">
+        <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div>
+        <h3>Our Mission</h3>
+        <p>To continuously achieve economic value by optimizing resources through operational excellence — enabled by technology and driven by innovation. We empower our workforce to deliver services that exceed customer expectations, providing value for money while ensuring strong returns to our employees and shareholders.</p>
+      </div>
+      <div class="vm vision reveal" data-d="1">
+        <div class="vico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Our Vision</h3>
+        <p>To achieve global benchmarking, fulfil our commitments, and create lasting customer growth value — all while empowering our people. We strive to be an organization recognised for reliability, precision and engineering integrity across every industry we serve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="section" data-screen-label="About — Journey">
+  <div class="wrap" style="display:grid;grid-template-columns:.8fr 1.2fr;gap:56px">
+    <div class="reveal">
+      <span class="eyebrow">Milestones</span>
+      <h2 style="font-size:38px;margin-top:16px">Our journey of growth</h2>
+      <p style="margin-top:16px;color:var(--slate-600);font-size:16px;line-height:1.7">Every step forward has been earned through hard work and a willingness to embrace opportunity — building capability, capacity and trust year after year.</p>
+    </div>
+    <div class="journey reveal" data-d="1">
+      <div class="j-item"><div class="yr">2008</div><h4>The beginning</h4><p>MP Electric Works is founded in Dewas with three employees and a passion for electrical &amp; mechanical engineering.</p></div>
+      <div class="j-item"><div class="yr">2012</div><h4>Winding expertise</h4><p>Expanded wound-stator capability for solar, agriculture and domestic pump motors, building on decades of winding experience.</p></div>
+      <div class="j-item"><div class="yr">2016</div><h4>Machining &amp; fabrication scale-up</h4><p>Added CNC turning, fabrication and special purpose machine capability to serve automobile and pump-sector industries.</p></div>
+      <div class="j-item"><div class="yr">2020</div><h4>Electrical panels &amp; HT/LT works</h4><p>Broadened into PCC, MCC, APFC panels and 33/11 KV substation, transmission and cable works for industrial &amp; renewable segments.</p></div>
+      <div class="j-item" style="padding-bottom:0"><div class="yr">Today</div><h4>30+ team · 8000 sq ft · 50+ clients</h4><p>A complete engineering partner trusted by leading manufacturers across Madhya Pradesh, Gujarat, U.P. and beyond.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="section" style="background:var(--mist)" data-screen-label="About — Leadership">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:40px">
+      <span class="eyebrow">Leadership</span>
+      <h2 style="font-size:38px">Guided by hands-on engineering experience</h2>
+    </div>
+    <div class="leader reveal">
+      <div class="portrait">
+        <div class="ph-slot">
+          <div class="mono">MP</div>
+          <span>Founder portrait<br>— add photo —</span>
+        </div>
+      </div>
+      <div class="lc">
+        <div class="qmark">&ldquo;</div>
+        <blockquote>We have worked hard to get where we are today, and we embrace every opportunity that comes our way. Our customers grow their business — and we grow with their satisfaction.</blockquote>
+        <div class="name">Founder &amp; Managing Director</div>
+        <div class="role">M.P. Electric Works</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" data-screen-label="About — CTA">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Partner with MPEW</span>
+      <h2 style="margin-top:14px">Let's engineer your next project together.</h2>
+      <p>From a single component to a complete installation — talk to our team today.</p>
+    </div>
+    <div style="display:flex;gap:14px;flex:none">
+      <a class="btn btn-primary btn-lg" href="contact.html#quote">Get a Quote</a>
+      <a class="btn btn-ghost btn-lg" href="services.html">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

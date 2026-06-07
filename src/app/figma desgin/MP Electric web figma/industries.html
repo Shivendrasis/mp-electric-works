@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industries We Serve — Automobile, Solar, Pumps &amp; Automation | MPEW</title>
+<meta name="description" content="MPEW serves the automobile, renewable energy, solar, pump manufacturing, industrial automation and manufacturing-plant sectors with electrical & mechanical solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mpew.css">
+<style>
+  .ind-list{display:flex;flex-direction:column;gap:24px;margin-top:50px;}
+  .ind-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;transition:box-shadow .25s, border-color .25s;}
+  .ind-row:hover{box-shadow:var(--sh-lg);border-color:transparent;}
+  .ind-row:nth-child(even){grid-template-columns:1.1fr .9fr;}
+  .ind-row:nth-child(even) .ir-img{order:2;}
+  .ind-row:nth-child(even) .ir-bd{order:1;}
+  .ir-img{position:relative;min-height:300px;overflow:hidden;}
+  .ir-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+  .ind-row:hover .ir-img img{transform:scale(1.05);}
+  .ir-img .num{position:absolute;left:22px;top:18px;font-family:var(--display);font-weight:900;font-size:54px;color:rgba(255,255,255,.9);text-shadow:0 4px 20px rgba(0,0,0,.4);line-height:1;}
+  .ir-bd{padding:44px 42px;display:flex;flex-direction:column;justify-content:center;}
+  .ir-bd .tag{align-self:flex-start;margin-bottom:16px;}
+  .ir-bd h3{font-size:26px;}
+  .ir-bd p{color:var(--slate-600);font-size:15.5px;margin-top:12px;line-height:1.7;}
+  .ir-bd .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .ir-bd .chips span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--slate-600);background:var(--mist);border:1px solid var(--line);padding:6px 11px;border-radius:100px;}
+  @media (max-width:860px){
+    .ind-row,.ind-row:nth-child(even){grid-template-columns:1fr;}
+    .ind-row:nth-child(even) .ir-img{order:0;}
+    .ir-img{min-height:220px;}
+    .ir-bd{padding:32px 28px;}
+  }
+</style>
+</head>
+<body data-page="industries">
+
+<section class="banner" data-screen-label="Industries — Banner">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a><span class="sep">/</span><span class="cur">Industries</span></div>
+    <h1 class="reveal">Engineering partners across core industries</h1>
+    <p class="reveal" data-d="1">Our mechanical and electrical capabilities serve a broad base of manufacturers — from pumps and solar to automobile and industrial automation — with components, panels and complete installations.</p>
+  </div>
+</section>
+
+<!-- intro stats -->
+<section class="section-sm" style="border-bottom:1px solid var(--line)" data-screen-label="Industries — Stats">
+  <div class="wrap stats reveal">
+    <div class="stat"><div class="num"><span data-count="6">0</span></div><div class="lbl">Core Sectors</div></div>
+    <div class="stat"><div class="num"><span data-count="50">0</span><span class="o">+</span></div><div class="lbl">Industrial Clients</div></div>
+    <div class="stat"><div class="num"><span data-count="100">0</span><span class="o">+</span></div><div class="lbl">Projects Delivered</div></div>
+    <div class="stat"><div class="num"><span data-count="4">0</span></div><div class="lbl">States Served</div></div>
+    <div class="stat"><div class="num"><span data-count="15">0</span><span class="o">+</span></div><div class="lbl">Years of Trust</div></div>
+  </div>
+</section>
+
+<section class="section" data-screen-label="Industries — List">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Sectors We Serve</span>
+      <h2 style="font-size:38px">Capability matched to every industry</h2>
+    </div>
+    <div class="ind-list">
+
+      <div class="ind-row reveal">
+        <div class="ir-img"><span class="num">01</span><img src="assets/img/fab-1.jpg" alt="Automobile sector"></div>
+        <div class="ir-bd"><span class="tag">Automobile</span><h3>Automobile Industry</h3><p>Machined components, operator platforms, heat-treatment baskets, trolleys and fabricated materials for leading automobile manufacturers in the region.</p><div class="chips"><span>CI &amp; MS Machining</span><span>Fabrication</span><span>Trolleys</span><span>Components</span></div></div>
+      </div>
+
+      <div class="ind-row reveal">
+        <div class="ir-img"><span class="num">02</span><img src="assets/img/substation-sunset.jpg" alt="Renewable energy"></div>
+        <div class="ir-bd"><span class="tag">Renewable Energy</span><h3>Renewable Energy</h3><p>Electrical panels, structures and metering yards for renewable power projects — including HT cable supply, termination and 4-pole structures.</p><div class="chips"><span>Metering Yards</span><span>HT Cabling</span><span>Structures</span><span>Panels</span></div></div>
+      </div>
+
+      <div class="ind-row reveal">
+        <div class="ir-img"><span class="num">03</span><img src="assets/img/winding-2.jpg" alt="Solar industry"></div>
+        <div class="ir-bd"><span class="tag">Solar</span><h3>Solar Industry</h3><p>Wound stators for oil-filled solar motors (PMSM / PMDC) and solar pump motors — supplied to solar pump manufacturers across India.</p><div class="chips"><span>Solar Pump Motors</span><span>PMSM / PMDC</span><span>Wound Stators</span></div></div>
+      </div>
+
+      <div class="ind-row reveal">
+        <div class="ir-img"><span class="num">04</span><img src="assets/img/parts-housings.jpg" alt="Pump manufacturing"></div>
+        <div class="ir-bd"><span class="tag">Pumps</span><h3>Pump Manufacturing</h3><p>Wound stators for self-priming, monoblock and openwell pumps, plus CI machining, drilling and tapping — a long-standing strength of MPEW.</p><div class="chips"><span>Monoblock</span><span>Self-priming</span><span>Openwell</span><span>CI Machining</span></div></div>
+      </div>
+
+      <div class="ind-row reveal">
+        <div class="ir-img"><span class="num">05</span><img src="assets/img/panel-2.jpg" alt="Industrial automation"></div>
+        <div class="ir-bd"><span class="tag">Automation</span><h3>Industrial Automation</h3><p>Control &amp; automation panels, RTU panels, starter panels and hydraulic power packs for automated production environments.</p><div class="chips"><span>Control Panels</span><span>RTU</span><span>Starters</span><span>Power Packs</span></div></div>
+      </div>
+
+      <div class="ind-row reveal">
+        <div class="ir-img"><span class="num">06</span><img src="assets/img/spm-machine.jpg" alt="Manufacturing plants"></div>
+        <div class="ir-bd"><span class="tag">Manufacturing</span><h3>Manufacturing Plants</h3><p>Special purpose machines, conveyors, fabricated trolleys, scrap-bundling machines and bespoke equipment that keep production lines moving.</p><div class="chips"><span>SPM</span><span>Conveyors</span><span>Fabrication</span><span>Bespoke Machines</span></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" data-screen-label="Industries — CTA">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Your sector, our expertise</span>
+      <h2 style="margin-top:14px">Let's solve your industry's engineering challenge.</h2>
+      <p>We adapt our machining, fabrication and electrical capability to your exact application.</p>
+    </div>
+    <div style="display:flex;gap:14px;flex:none">
+      <a class="btn btn-primary btn-lg" href="contact.html#quote">Get a Quote</a>
+      <a class="btn btn-ghost btn-lg" href="clients.html">See Our Clients</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

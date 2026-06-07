@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Static Figma/HTML design export — not part of the app source.
+    "src/app/figma desgin/**",
   ]),
 ]);
 

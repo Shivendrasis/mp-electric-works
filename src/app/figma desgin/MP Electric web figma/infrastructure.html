@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infrastructure &amp; Quality — 8000 Sq Ft Workshop | MPEW</title>
+<meta name="description" content="MPEW's 8000 sq ft workshop: CNC turning, lathe, drill, hydraulic press, welding, coil looping machines, baking oven and calibrated measuring & testing equipment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mpew.css">
+<style>
+  .infra-hero{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:14px;margin-top:50px;}
+  .infra-hero .ph{border-radius:var(--r);overflow:hidden;position:relative;}
+  .infra-hero .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+  .infra-hero .ph:hover img{transform:scale(1.06);}
+  .infra-hero .ph .cap{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(transparent,rgba(6,24,43,.85));color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;}
+  .infra-hero .big{grid-column:span 2;grid-row:span 2;}
+  .infra-hero .tall{grid-row:span 2;}
+
+  .machine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;}
+  .machine{display:flex;gap:16px;align-items:flex-start;padding:22px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);transition:border-color .2s, box-shadow .2s;}
+  .machine:hover{border-color:var(--orange-500);box-shadow:var(--sh);}
+  .machine .mi{width:46px;height:46px;border-radius:11px;background:var(--navy-800);color:#fff;display:grid;place-items:center;flex:none;}
+  .machine .mi svg{width:23px;height:23px;}
+  .machine h4{font-size:16px;}
+  .machine p{font-size:13px;color:var(--slate-500);margin-top:4px;}
+
+  .measure{background:var(--navy-800);border-radius:var(--r-xl);padding:48px 46px;color:#fff;position:relative;overflow:hidden;margin-top:8px;}
+  .measure::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:46px 46px;}
+  .measure>*{position:relative;}
+  .measure h3{color:#fff;font-size:26px;}
+  .measure .mlist{display:grid;grid-template-columns:1fr 1fr;gap:14px 36px;margin-top:28px;}
+  .measure .mlist li{list-style:none;display:flex;gap:12px;align-items:flex-start;color:#cdd8e2;font-size:15px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08);}
+  .measure .mlist li svg{width:20px;height:20px;color:var(--orange-400);flex:none;margin-top:2px;}
+  .measure .mlist li b{color:#fff;font-weight:600;}
+
+  @media (max-width:860px){
+    .infra-hero{grid-template-columns:1fr 1fr;grid-auto-rows:130px;}
+    .infra-hero .big{grid-column:span 2;}
+    .machine-grid{grid-template-columns:1fr;}
+    .measure .mlist{grid-template-columns:1fr;}
+    .measure{padding:34px 26px;}
+  }
+</style>
+</head>
+<body data-page="infrastructure">
+
+<section class="banner" data-screen-label="Infrastructure — Banner">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a><span class="sep">/</span><span class="cur">Infrastructure</span></div>
+    <h1 class="reveal">An 8000 sq ft workshop built for precision</h1>
+    <p class="reveal" data-d="1">We have developed a sophisticated infrastructure of 8000 sq ft, equipped with the best machines and testing facilities — to ensure every product is of the highest quality, and to keep improving our operations.</p>
+  </div>
+</section>
+
+<!-- workshop showcase -->
+<section class="section" style="padding-bottom:40px" data-screen-label="Infrastructure — Workshop">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Inside Our Workshop</span>
+      <h2 style="font-size:38px">Where precision is made</h2>
+    </div>
+    <div class="infra-hero reveal">
+      <div class="ph big"><img src="assets/img/cnc-machine.jpg" alt="CNC turning machine"><span class="cap">CNC Turning Center</span></div>
+      <div class="ph"><img src="assets/img/lathe-1.jpg" alt="Lathe"><span class="cap">Lathe Machine</span></div>
+      <div class="ph"><img src="assets/img/drill-press.jpg" alt="Drill"><span class="cap">Drill Machine</span></div>
+      <div class="ph"><img src="assets/img/lathe-work.jpg" alt="Machining"><span class="cap">Precision Turning</span></div>
+      <div class="ph"><img src="assets/img/winding-1.jpg" alt="Winding"><span class="cap">Winding Shop</span></div>
+      <div class="ph tall"><img src="assets/img/oven.jpg" alt="Baking oven"><span class="cap">Baking Oven</span></div>
+      <div class="ph"><img src="assets/img/fab-structure.jpg" alt="Fabrication"><span class="cap">Fabrication Bay</span></div>
+      <div class="ph"><img src="assets/img/parts-turned.jpg" alt="Components"><span class="cap">Finished Components</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- machines -->
+<section class="section" style="padding-top:30px;background:var(--mist)" data-screen-label="Infrastructure — Machines">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our Machinery</span>
+      <h2 style="font-size:34px">Machines in our workshop</h2>
+    </div>
+    <div class="machine-grid">
+      <div class="machine reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div><div><h4>CNC Turning Machines</h4><p>Automated, repeatable precision turning</p></div></div>
+      <div class="machine reveal" data-d="1"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M6 12V8h12v4M9 12v4h6v-4"/></svg></div><div><h4>Lathe Machines</h4><p>Conventional turning &amp; facing</p></div></div>
+      <div class="machine reveal" data-d="2"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8M9 10h6l-1 6h-4zM10 16v6M14 16v6"/></svg></div><div><h4>Drill Machines</h4><p>Accurate hole-making to spec</p></div></div>
+      <div class="machine reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v6M16 3v6M6 9h12l-1 5H7zM10 14v7M14 14v7"/></svg></div><div><h4>Auto Tap (Thread) Machine</h4><p>Automated threading operations</p></div></div>
+      <div class="machine reveal" data-d="1"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="5"/><path d="M12 8v6M7 14h10v3H7zM5 21h14"/></svg></div><div><h4>Hydraulic Press Machine</h4><p>High-tonnage pressing &amp; forming</p></div></div>
+      <div class="machine reveal" data-d="2"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M21 7v5h-5"/></svg></div><div><h4>Welding &amp; Grinding</h4><p>Compressor, grinder &amp; welding machines</p></div></div>
+      <div class="machine reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div><div><h4>Automatic Coil Looping Machine</h4><p>Consistent coil forming for winding</p></div></div>
+      <div class="machine reveal" data-d="1"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 9v11"/></svg></div><div><h4>Slot Paper Folding Machine</h4><p>Insulation slot paper preparation</p></div></div>
+      <div class="machine reveal" data-d="2"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 13h2M7 16h2"/></svg></div><div><h4>Baking Oven</h4><p>Controlled winding-varnish baking</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- measuring equipment -->
+<section class="section" data-screen-label="Infrastructure — Measuring">
+  <div class="wrap" style="display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center">
+    <div class="reveal">
+      <span class="eyebrow">Precision &amp; Testing</span>
+      <h2 style="font-size:34px;margin-top:14px">Calibrated measuring &amp; testing equipment</h2>
+      <p style="margin-top:16px;color:var(--slate-600);font-size:16px;line-height:1.7">Quality means products that meet and exceed all requirements, standards and specifications — achieved through attention to every stage of production. Our workshop is equipped with a full range of precision measuring instruments.</p>
+      <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+        <div class="tag">0.001 mm accuracy</div>
+        <div class="tag">Surge &amp; HV testing</div>
+        <div class="tag">Documented inspection</div>
+      </div>
+    </div>
+    <div class="measure reveal" data-d="1">
+      <h3>In our measuring lab</h3>
+      <ul class="mlist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Digital Height Vernier</b> — 12 inch</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Bench Centre</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Micrometers</b> — 0 to 150 mm ranges</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Bore Dial Sets</b> — 10 to 160 mm</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Dial Gauge Indicators</b> — 0.001 &amp; 0.01 mm</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Digital &amp; Analog Verniers</b></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Surface Plates</b> — graphite &amp; MS ground</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Surge, Resistance &amp; HV Meters</b></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- quality timeline -->
+<section class="section" style="background:var(--mist)" data-screen-label="Infrastructure — Quality">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Our Quality Process</span>
+      <h2 style="font-size:34px">Quality, built into every stage</h2>
+      <p>A disciplined process from measurement to dispatch ensures every component leaves the way it should.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal"><div class="dot">1</div><h4>Precision Measurement</h4><p>Every dimension verified against drawing using calibrated instruments.</p></div>
+      <div class="tl-step reveal" data-d="1"><div class="dot">2</div><h4>Testing Process</h4><p>Surge, resistance and HV testing for wound stators and assemblies.</p></div>
+      <div class="tl-step reveal" data-d="2"><div class="dot">3</div><h4>Quality Inspection</h4><p>Documented inspection to confirm standards and specifications are met.</p></div>
+      <div class="tl-step reveal" data-d="3"><div class="dot">4</div><h4>Delivery Standards</h4><p>Baked, finished and dispatched — on time, every time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" data-screen-label="Infrastructure — CTA">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">See it for yourself</span>
+      <h2 style="margin-top:14px">Visit our facility or request a capability deck.</h2>
+      <p>We're always happy to walk customers through our workshop in Dewas.</p>
+    </div>
+    <div style="display:flex;gap:14px;flex:none">
+      <a class="btn btn-primary btn-lg" href="contact.html#quote">Schedule a Visit</a>
+      <a class="btn btn-ghost btn-lg" href="gallery.html">View Gallery</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

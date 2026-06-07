@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery — Workshop, Machining, Winding &amp; Panels | MPEW</title>
+<meta name="description" content="A visual tour of MP Electric Works — CNC machining, precision components, fabrication, motor winding and electrical panels from our Dewas workshop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/mpew.css">
+<style>
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 36px;}
+  .filter-btn{font-family:var(--body);font-weight:600;font-size:14px;padding:10px 18px;border-radius:100px;border:1.5px solid var(--line-strong);background:#fff;color:var(--slate-600);cursor:pointer;transition:all .2s;}
+  .filter-btn:hover{border-color:var(--navy-800);color:var(--navy-800);}
+  .filter-btn.active{background:var(--navy-800);border-color:var(--navy-800);color:#fff;}
+  .m-item{transition:opacity .3s, transform .3s;}
+  .m-item.hide{display:none;}
+</style>
+</head>
+<body data-page="gallery">
+
+<section class="banner" data-screen-label="Gallery — Banner">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a><span class="sep">/</span><span class="cur">Gallery</span></div>
+    <h1 class="reveal">Inside MP Electric Works</h1>
+    <p class="reveal" data-d="1">A visual tour of our people, machines and the precision components we deliver every day. Click any image to view it larger.</p>
+  </div>
+</section>
+
+<section class="section" data-screen-label="Gallery — Grid">
+  <div class="wrap">
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="machining">Machining</button>
+      <button class="filter-btn" data-filter="components">Components</button>
+      <button class="filter-btn" data-filter="fabrication">Fabrication</button>
+      <button class="filter-btn" data-filter="winding">Winding</button>
+      <button class="filter-btn" data-filter="panels">Panels</button>
+      <button class="filter-btn" data-filter="facility">Facility</button>
+    </div>
+
+    <div class="masonry reveal" id="gallery">
+      <div class="m-item" data-cat="machining" data-lightbox data-full="assets/img/cnc-machine.jpg"><img src="assets/img/cnc-machine.jpg" alt="CNC turning center"><div class="ov"><span>CNC Turning Center</span></div></div>
+      <div class="m-item" data-cat="machining" data-lightbox data-full="assets/img/cnc-shop.jpg"><img src="assets/img/cnc-shop.jpg" alt="CNC shop"><div class="ov"><span>CNC Machine Shop</span></div></div>
+      <div class="m-item" data-cat="components" data-lightbox data-full="assets/img/parts-turned.jpg"><img src="assets/img/parts-turned.jpg" alt="Turned components"><div class="ov"><span>Turned Components</span></div></div>
+      <div class="m-item" data-cat="winding" data-lightbox data-full="assets/img/winding-2.jpg"><img src="assets/img/winding-2.jpg" alt="Motor winding"><div class="ov"><span>Winding Shop</span></div></div>
+      <div class="m-item" data-cat="panels" data-lightbox data-full="assets/img/panel-1.jpg"><img src="assets/img/panel-1.jpg" alt="Electrical panel"><div class="ov"><span>Electrical Panel</span></div></div>
+      <div class="m-item" data-cat="machining" data-lightbox data-full="assets/img/lathe-1.jpg"><img src="assets/img/lathe-1.jpg" alt="Lathe machine"><div class="ov"><span>Lathe Machine</span></div></div>
+      <div class="m-item" data-cat="components" data-lightbox data-full="assets/img/parts-shafts.jpg"><img src="assets/img/parts-shafts.jpg" alt="Machined shafts"><div class="ov"><span>Machined Shafts</span></div></div>
+      <div class="m-item" data-cat="facility" data-lightbox data-full="assets/img/factory-exterior.jpg"><img src="assets/img/factory-exterior.jpg" alt="Factory exterior"><div class="ov"><span>Our Facility · Dewas</span></div></div>
+      <div class="m-item" data-cat="components" data-lightbox data-full="assets/img/parts-housings.jpg"><img src="assets/img/parts-housings.jpg" alt="Pump housings"><div class="ov"><span>Pump Housings</span></div></div>
+      <div class="m-item" data-cat="fabrication" data-lightbox data-full="assets/img/fab-structure.jpg"><img src="assets/img/fab-structure.jpg" alt="Fabrication"><div class="ov"><span>Fabricated Structure</span></div></div>
+      <div class="m-item" data-cat="winding" data-lightbox data-full="assets/img/stators-1.jpg"><img src="assets/img/stators-1.jpg" alt="Wound stators"><div class="ov"><span>Wound Stators</span></div></div>
+      <div class="m-item" data-cat="machining" data-lightbox data-full="assets/img/lathe-work.jpg"><img src="assets/img/lathe-work.jpg" alt="Lathe work"><div class="ov"><span>Precision Turning</span></div></div>
+      <div class="m-item" data-cat="panels" data-lightbox data-full="assets/img/panel-4.jpg"><img src="assets/img/panel-4.jpg" alt="Control panel"><div class="ov"><span>Control Panel</span></div></div>
+      <div class="m-item" data-cat="components" data-lightbox data-full="assets/img/parts-rings1.jpg"><img src="assets/img/parts-rings1.jpg" alt="Machined rings"><div class="ov"><span>Machined Rings</span></div></div>
+      <div class="m-item" data-cat="fabrication" data-lightbox data-full="assets/img/motors-crate.jpg"><img src="assets/img/motors-crate.jpg" alt="Motor stacks"><div class="ov"><span>Motor Assemblies</span></div></div>
+      <div class="m-item" data-cat="winding" data-lightbox data-full="assets/img/winding-1.jpg"><img src="assets/img/winding-1.jpg" alt="Coil winding"><div class="ov"><span>Coil Winding</span></div></div>
+      <div class="m-item" data-cat="machining" data-lightbox data-full="assets/img/drill-press.jpg"><img src="assets/img/drill-press.jpg" alt="Drill machine"><div class="ov"><span>Drill Machine</span></div></div>
+      <div class="m-item" data-cat="panels" data-lightbox data-full="assets/img/panels-outdoor.jpg"><img src="assets/img/panels-outdoor.jpg" alt="Panels"><div class="ov"><span>Panel Installation</span></div></div>
+      <div class="m-item" data-cat="components" data-lightbox data-full="assets/img/bench-center.jpg"><img src="assets/img/bench-center.jpg" alt="Bench center"><div class="ov"><span>Bench Centre Inspection</span></div></div>
+      <div class="m-item" data-cat="fabrication" data-lightbox data-full="assets/img/fab-1.jpg"><img src="assets/img/fab-1.jpg" alt="Fabricated parts"><div class="ov"><span>Fabricated Components</span></div></div>
+      <div class="m-item" data-cat="facility" data-lightbox data-full="assets/img/oven.jpg"><img src="assets/img/oven.jpg" alt="Baking oven"><div class="ov"><span>Baking Oven</span></div></div>
+      <div class="m-item" data-cat="winding" data-lightbox data-full="assets/img/winding-test.jpg"><img src="assets/img/winding-test.jpg" alt="Winding test"><div class="ov"><span>Stator Assembly</span></div></div>
+      <div class="m-item" data-cat="panels" data-lightbox data-full="assets/img/panel-2.jpg"><img src="assets/img/panel-2.jpg" alt="Panel wiring"><div class="ov"><span>Panel Wiring</span></div></div>
+      <div class="m-item" data-cat="facility" data-lightbox data-full="assets/img/substation-sunset.jpg"><img src="assets/img/substation-sunset.jpg" alt="Substation"><div class="ov"><span>HT/LT Substation</span></div></div>
+      <div class="m-item" data-cat="machining" data-lightbox data-full="assets/img/lathe-2.jpg"><img src="assets/img/lathe-2.jpg" alt="Lathe"><div class="ov"><span>Lathe Operation</span></div></div>
+      <div class="m-item" data-cat="components" data-lightbox data-full="assets/img/parts-rings3.jpg"><img src="assets/img/parts-rings3.jpg" alt="Stator rings"><div class="ov"><span>Stator Housings</span></div></div>
+      <div class="m-item" data-cat="fabrication" data-lightbox data-full="assets/img/spm-machine.jpg"><img src="assets/img/spm-machine.jpg" alt="SPM"><div class="ov"><span>Special Purpose Machine</span></div></div>
+      <div class="m-item" data-cat="panels" data-lightbox data-full="assets/img/panel-control.jpg"><img src="assets/img/panel-control.jpg" alt="Control panel"><div class="ov"><span>Automation Panel</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" data-screen-label="Gallery — CTA">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Like what you see?</span>
+      <h2 style="margin-top:14px">Let's add your project to our gallery.</h2>
+      <p>Reach out and let's discuss how we can help.</p>
+    </div>
+    <div style="display:flex;gap:14px;flex:none">
+      <a class="btn btn-primary btn-lg" href="contact.html#quote">Get a Quote</a>
+      <a class="btn btn-ghost btn-lg" href="services.html">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/site.js"></script>
+<script>
+  (function(){
+    var btns = document.querySelectorAll('.filter-btn');
+    var items = document.querySelectorAll('#gallery .m-item');
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        btns.forEach(function(x){x.classList.remove('active');});
+        b.classList.add('active');
+        var f = b.getAttribute('data-filter');
+        items.forEach(function(it){
+          it.classList.toggle('hide', !(f==='all' || it.getAttribute('data-cat')===f));
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
