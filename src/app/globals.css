@@ -2590,3 +2590,333 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   RESPONSIVE HARDENING
+   Root cause of the sideways-scroll bug: grid/flex children
+   default to `min-width: auto`, so the 4-column footer could
+   never shrink below its content and pinned the whole document
+   to 427px wide on every phone. Fixed below, plus a guard rail
+   and proper small-phone breakpoints (620 / 480 / 380).
+   ============================================================ */
+
+/* --- 1. Never allow the page to scroll sideways ------------- */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* --- 2. Let grid & flex children actually shrink ------------ */
+.cols > *,
+.g-2 > *,
+.g-3 > *,
+.g-4 > *,
+.stats > *,
+.logos > *,
+.about-grid > *,
+.hero-stats .box > *,
+.story > *,
+.vm-grid > *,
+.leader > *,
+.timeline > *,
+.svc-grid > *,
+.feature-svc > *,
+.ind-grid > *,
+.ind-row > *,
+.cap-grid > *,
+.why-grid > *,
+.infra-hero > *,
+.machine-grid > *,
+.measure .mlist > *,
+.contact-grid > *,
+.form-row > *,
+.quotes-grid > *,
+.checklist > * {
+  min-width: 0;
+}
+
+/* --- 3. Long strings (emails, URLs) must break, not overflow */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+.contact-row,
+.fdesc {
+  overflow-wrap: break-word;
+}
+
+/* --- 4. Media never wider than its box --------------------- */
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* ============================================================
+   <= 860px — tablet / large phone
+   ============================================================ */
+@media (max-width: 860px) {
+  .site-footer .cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  /* badge used to hang 22px outside the page on mobile */
+  .about-media .badge {
+    right: 0;
+    bottom: -18px;
+    padding: 18px 22px;
+  }
+  .about-media .badge b {
+    font-size: 34px;
+  }
+  .about-grid {
+    gap: 56px;
+  }
+  .cta-band .wrap {
+    padding: 52px 22px;
+    gap: 28px;
+  }
+  .hero .inner {
+    padding-top: 112px;
+    padding-bottom: 96px;
+  }
+  .hero .scroll-ind {
+    display: none;
+  }
+  .hero-stats .box .stat {
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-stats .box .stat:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ============================================================
+   <= 620px — phones: single column everywhere
+   ============================================================ */
+@media (max-width: 620px) {
+  .site-footer {
+    padding-top: 56px;
+  }
+  .site-footer .cols {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-bottom: 36px;
+  }
+  .site-footer .fdesc {
+    max-width: none;
+    margin: 16px 0;
+  }
+  .site-footer h4 {
+    margin-bottom: 14px;
+  }
+  .site-footer .legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .infra-hero {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px;
+  }
+  .infra-hero .big {
+    grid-column: span 1;
+  }
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   <= 480px — standard phone
+   ============================================================ */
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 18px;
+  }
+  .section {
+    padding: 52px 0;
+  }
+  .sec-head h2 {
+    font-size: 25px;
+  }
+
+  /* hero */
+  .hero h1 {
+    font-size: clamp(29px, 8.4vw, 40px);
+  }
+  .hero .inner {
+    padding-top: 100px;
+    padding-bottom: 84px;
+  }
+  .hero .sub {
+    font-size: 15.5px;
+    margin-top: 18px;
+  }
+  .hero .cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .hero .cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero .trust {
+    gap: 14px 20px;
+    margin-top: 32px;
+  }
+  .hero-stats {
+    margin-top: -28px;
+  }
+  .hero-stats .box .stat {
+    padding: 20px 10px;
+  }
+
+  /* inner-page banner */
+  .banner h1 {
+    font-size: 28px;
+  }
+  .banner p {
+    font-size: 15.5px;
+    margin-top: 12px;
+  }
+  .banner .crumb {
+    font-size: 11px;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  /* cta band */
+  .cta-band .wrap {
+    padding: 44px 18px;
+  }
+  .cta-band h2 {
+    font-size: 26px;
+  }
+  .cta-band p {
+    font-size: 15.5px;
+  }
+
+  /* dense padding blocks */
+  .leader .lc {
+    padding: 28px 20px;
+  }
+  .ir-bd {
+    padding: 26px 20px;
+  }
+  .form-card {
+    padding: 22px 18px;
+  }
+  .measure {
+    padding: 26px 18px;
+  }
+  .vm {
+    padding: 28px 22px;
+  }
+
+  /* floating buttons — were colliding with the footer CTA */
+  .wa-float {
+    right: 14px;
+    bottom: 14px;
+  }
+  .wa-float a {
+    padding: 12px;
+  }
+  .wa-float a svg {
+    width: 24px;
+    height: 24px;
+  }
+  .wa-float .pulse {
+    width: 48px;
+    height: 48px;
+  }
+  .to-top {
+    right: 16px;
+    bottom: 76px;
+    width: 42px;
+    height: 42px;
+  }
+  .to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* the WhatsApp label expands on hover — useless and clipped on touch */
+@media (hover: none) {
+  .wa-float a .wa-txt {
+    display: none;
+  }
+}
+
+/* ============================================================
+   <= 380px — small phones
+   ============================================================ */
+@media (max-width: 380px) {
+  .wrap {
+    padding: 0 14px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .sec-head h2 {
+    font-size: 23px;
+  }
+  .banner h1 {
+    font-size: 25px;
+  }
+  .cta-band h2 {
+    font-size: 23px;
+  }
+  .btn {
+    font-size: 14.5px;
+    padding: 13px 20px;
+  }
+  .hero-stats .box {
+    grid-template-columns: 1fr;
+  }
+  .hero-stats .box .stat {
+    border-right: none;
+  }
+  .stat .num {
+    font-size: 34px;
+  }
+  .site-footer .socials a {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* eyebrow labels are long mono strings — tighten so they hold one line */
+.eyebrow::before {
+  flex: none;
+}
+@media (max-width: 480px) {
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    gap: 8px;
+  }
+  .eyebrow::before {
+    width: 18px;
+  }
+}
+@media (max-width: 380px) {
+  .eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+  }
+}
